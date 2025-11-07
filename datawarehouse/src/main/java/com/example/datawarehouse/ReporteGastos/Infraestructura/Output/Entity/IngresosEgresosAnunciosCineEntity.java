@@ -1,4 +1,4 @@
-package com.example.datawarehouse.ReporteGastos.Infraestructura.Entity;
+package com.example.datawarehouse.ReporteGastos.Infraestructura.Output.Entity;
 
 
 import jakarta.persistence.Column;
@@ -12,8 +12,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.UUID;
-import java.time.LocalDate;
-import java.util.UUID;
+
 @Entity
 @Setter
 @Getter
