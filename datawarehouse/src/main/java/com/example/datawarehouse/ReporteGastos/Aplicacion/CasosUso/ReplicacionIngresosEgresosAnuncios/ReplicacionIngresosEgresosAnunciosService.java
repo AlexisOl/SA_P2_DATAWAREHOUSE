@@ -47,7 +47,7 @@ public class ReplicacionIngresosEgresosAnunciosService implements ReplicacionIng
                     replicacion.getUsuario(),
                     replicacion.getMonto(),
                     replicacion.getFecha(),
-                    replicacion.getEstado(),
+                    "EXITOSA",
                     replicacion.getDetalle(),
                     replicacion.getCine()
             );
