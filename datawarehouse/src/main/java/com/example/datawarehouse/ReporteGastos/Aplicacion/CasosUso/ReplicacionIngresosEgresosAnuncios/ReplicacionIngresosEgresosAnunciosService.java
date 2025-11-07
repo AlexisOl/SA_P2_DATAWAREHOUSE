@@ -25,6 +25,21 @@ public class ReplicacionIngresosEgresosAnunciosService implements ReplicacionIng
 
     public void ingresoInformacionTransaccional(List<ReplicacionFacturaAnuncioDTO> replicacionFacturaAnuncioDTO) {
         for (ReplicacionFacturaAnuncioDTO replicacion: replicacionFacturaAnuncioDTO) {
+            System.out.println(                   replicacion.getId()
+                            +" ------ \n"+
+                    replicacion.getAnuncio()
+                            +"------\n"+
+                    replicacion.getUsuario()
+                            +"------\n"+
+                    replicacion.getMonto()
+                            +"------\n"+
+                    replicacion.getFecha()
+                            +"------\n"+
+                    replicacion.getEstado()
+                            +"------\n"+
+                    replicacion.getDetalle()
+                    +"------\n"+
+                    replicacion.getCine());
             this.replicacionIngresosEgresosAnunciosOutputPort.ingresoInformacionTransaccional(
                     new IngresosEgresosAnunciosCine(
                             replicacion.getId(),
