@@ -21,13 +21,13 @@ public class IngresosEgresosAnunciosCineEntity {
     @Id
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
-    @Column( nullable = false)
+    @Column( nullable = true)
     private UUID anuncio;
     @Column( nullable = true)
     private UUID usuario;
-    @Column( nullable = false)
+    @Column( nullable = true)
     private Double monto;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private LocalDate fecha;
     @Column(nullable = true)
     private String estado;

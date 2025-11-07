@@ -5,6 +5,7 @@ import com.example.comun.DTO.FacturaAnuncio.RespuestaAnuncioCreadoCineDTO;
 import com.example.datawarehouse.ReporteGastos.Aplicacion.Ports.Input.ReplicacionIngresosEgresosAnunciosInputPort;
 import com.example.datawarehouse.ReporteGastos.Aplicacion.Ports.Output.ReplicacionIngresosEgresosAnunciosOutputPort;
 import com.example.datawarehouse.ReporteGastos.Dominio.IngresosEgresosAnunciosCine;
+import com.example.datawarehouse.ReporteGastos.Infraestructura.Entity.IngresosEgresosAnunciosCineEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -40,17 +41,20 @@ public class ReplicacionIngresosEgresosAnunciosService implements ReplicacionIng
                     replicacion.getDetalle()
                     +"------\n"+
                     replicacion.getCine());
-            this.replicacionIngresosEgresosAnunciosOutputPort.ingresoInformacionTransaccional(
-                    new IngresosEgresosAnunciosCine(
-                            replicacion.getId(),
-                            replicacion.getAnuncio(),
-                            replicacion.getUsuario(),
-                            replicacion.getMonto(),
-                            replicacion.getFecha(),
-                            replicacion.getEstado(),
-                            replicacion.getDetalle(),
-                            replicacion.getCine()
-                    ));
+            IngresosEgresosAnunciosCineEntity entidad = new IngresosEgresosAnunciosCineEntity(
+                    replicacion.getId(),
+                    replicacion.getAnuncio(),
+                    replicacion.getUsuario(),
+                    replicacion.getMonto(),
+                    replicacion.getFecha(),
+                    replicacion.getEstado(),
+                    replicacion.getDetalle(),
+                    replicacion.getCine()
+            );
+
+            // guardar directamente
+            this.replicacionIngresosEgresosAnunciosOutputPort.ingresoInformacionTransaccional(entidad);
+
         }
 
     }
