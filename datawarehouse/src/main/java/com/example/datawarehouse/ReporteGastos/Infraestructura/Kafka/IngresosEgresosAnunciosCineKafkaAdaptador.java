@@ -32,6 +32,7 @@ public class IngresosEgresosAnunciosCineKafkaAdaptador {
             @Payload String mensaje,
             @Header(value = KafkaHeaders.CORRELATION_ID, required = false) String correlationId
     )  throws Exception {
+        System.out.println("LLEGA A FACTURACION REPLICADA");
         ListadoFacturadoAnuncio solicitud = objectMapper.readValue(mensaje, ListadoFacturadoAnuncio.class);
         //cambio a la factura del usuario
         this.replicacionIngresosEgresosAnunciosInputPort.ingresoInformacionTransaccional(solicitud.getListado());
