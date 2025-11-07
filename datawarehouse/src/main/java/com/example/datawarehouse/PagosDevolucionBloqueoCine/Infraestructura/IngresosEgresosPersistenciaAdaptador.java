@@ -1,8 +1,0 @@
-package com.example.datawarehouse.PagosDevolucionBloqueoCine.Infraestructura;
-
-import com.example.datawarehouse.PagosDevolucionBloqueoCine.Aplicacion.Ports.Output.DeterminarIngresosTiempoCineOutputPort;
-import org.springframework.stereotype.Component;
-
-@Component
-public class IngresosEgresosPersistenciaAdaptador  {
-}
