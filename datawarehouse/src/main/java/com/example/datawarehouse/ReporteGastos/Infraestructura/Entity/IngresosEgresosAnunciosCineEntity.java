@@ -1,7 +1,10 @@
 package com.example.datawarehouse.ReporteGastos.Infraestructura.Entity;
 
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +22,7 @@ import java.util.UUID;
 @Table(name = "ingreso_egreso_replicacion_anuncio")
 public class IngresosEgresosAnunciosCineEntity {
     @Id
-    @Column(name = "id", updatable = false, nullable = false)
+    @Column(name = "id", nullable = false)
     private UUID id;
     @Column( nullable = true)
     private UUID anuncio;

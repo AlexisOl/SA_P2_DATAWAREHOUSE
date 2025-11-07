@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Component
 @AllArgsConstructor
-public class IngresosEgresosPersistenciaAdaptador implements DeterminarIngresosTiempoCineOutputPort, ReplicacionIngresosEgresosAnunciosOutputPort {
+public class IngresosEgresosPersistenciaAdaptador implements  ReplicacionIngresosEgresosAnunciosOutputPort {
     private final IngresosEgresosAnunciosCineRepository ingresosEgresosAnunciosCineRepository;
     private final IngresoEgresosAnunciosCineMapper ingresoEgresosAnunciosCineMapper;
     @Override
