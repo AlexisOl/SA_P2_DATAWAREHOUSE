@@ -4,5 +4,5 @@ import com.example.datawarehouse.PagosDevolucionBloqueoCine.Aplicacion.Ports.Out
 import org.springframework.stereotype.Component;
 
 @Component
-public class IngresosEgresosPersistenciaAdaptador implements DeterminarIngresosTiempoCineOutputPort {
+public class IngresosEgresosPersistenciaAdaptador  {
 }
