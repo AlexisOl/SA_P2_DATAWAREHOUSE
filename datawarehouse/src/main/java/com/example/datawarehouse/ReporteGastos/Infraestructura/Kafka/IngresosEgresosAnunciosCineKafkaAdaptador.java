@@ -27,7 +27,6 @@ public class IngresosEgresosAnunciosCineKafkaAdaptador {
 
 
     @KafkaListener(topics = "ingreso-detalle-anuncio-facturacion", groupId = "dw-group")
-    @Transactional
     public void ingresoDetalleAnuncioFacturacion(
             @Payload String mensaje,
             @Header(value = KafkaHeaders.CORRELATION_ID, required = false) String correlationId
